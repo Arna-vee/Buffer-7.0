@@ -1,0 +1,39 @@
+<!-- templates/dashboard.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="box">
+
+<h1>Threat Logs 📊</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+<th>Agent</th>
+<th>Prompt</th>
+<th>Status</th>
+<th>Score</th>
+</tr>
+
+<tr th:each="x : ${list}">
+<td th:text="${x.agent}"></td>
+<td th:text="${x.prompt}"></td>
+<td th:text="${x.status}"></td>
+<td th:text="${x.score}"></td>
+</tr>
+
+</table>
+
+<br>
+
+<a href="/">Back</a>
+
+</div>
+
+</body>
+</html>

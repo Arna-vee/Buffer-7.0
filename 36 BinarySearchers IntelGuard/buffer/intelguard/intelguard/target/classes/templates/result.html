@@ -1,0 +1,34 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Result</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="box">
+
+<h1>Simulation Result</h1>
+
+<p><b>Agent:</b> <span th:text="${result.agent}"></span></p>
+
+<p><b>Prompt:</b> <span th:text="${result.prompt}"></span></p>
+
+<p><b>Status:</b> <span th:text="${result.status}"></span></p>
+
+<p><b>Risk Score:</b> <span th:text="${result.score}"></span></p>
+
+<p><b>Threat Type:</b> <span th:text="${result.reason}"></span></p>
+
+<p><b>Detected Words:</b>
+<span th:text="${result.matchedWords}"></span></p>
+
+<br>
+
+<a href="/">Back</a>
+
+</div>
+
+</body>
+</html>

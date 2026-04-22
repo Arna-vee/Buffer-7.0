@@ -1,0 +1,7 @@
+server
+admin
+network
+logs
+firewall
+system
+devices

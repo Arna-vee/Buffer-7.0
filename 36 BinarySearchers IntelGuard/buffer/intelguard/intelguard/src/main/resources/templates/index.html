@@ -1,0 +1,41 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Intel Guard</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="box">
+
+<h1>Intel Guard 🔐</h1>
+<h3>Simulation of AI Agents as Insider Threats</h3>
+
+<form action="/scan" method="post">
+
+<select name="agent">
+<option>HR Agent</option>
+<option>Finance Agent</option>
+<option>IT Agent</option>
+</select>
+
+<br><br>
+
+<textarea name="prompt" rows="6"
+placeholder="Enter task for AI Agent..." required></textarea>
+
+<br><br>
+
+<button type="submit">Run Simulation</button>
+
+</form>
+
+<br>
+
+<a href="/dashboard">View Dashboard</a>
+
+</div>
+
+</body>
+</html>
